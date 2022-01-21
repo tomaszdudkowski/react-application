@@ -3,7 +3,7 @@ import "../SCSS/Components/_header.scss";
 function Header() {
   return (
     <header className="header">
-      <p>Logo</p>
+      <p>Technology.</p>
       <ul>
         <li>
           <a href="#Menu">Menu</a>
