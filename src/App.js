@@ -1,9 +1,13 @@
-import './SCSS/App.scss';
-import Header from './Components/header';
+import "./SCSS/App.scss";
+import Header from "./Components/header";
+import Hero from "./Components/hero";
 
 function App() {
   return (
-    <Header />
+    <div>
+      <Header />
+      <Hero />
+    </div>
   );
 }
 
