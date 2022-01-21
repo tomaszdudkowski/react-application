@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+
+  justify-content: space-between;
+
+  p {
+    font-size: 1.5rem;
+    line-height: 0.8em;
+    padding-left: 3em;
+  }
+
+  ul {
+    line-height: 2.5em;
+    display: flex;
+    list-style: none;
+    padding-right: 6em;
+
+    li {
+      text-align: center;
+      box-sizing: border-box;
+      width: 6em;
+
+      a {
+        color: #474747;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+          color: #8829be;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
