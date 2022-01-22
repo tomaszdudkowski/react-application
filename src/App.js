@@ -1,13 +1,14 @@
 import "./SCSS/App.scss";
 import Header from "./Components/header";
-import Hero from "./Components/hero";
+// import Hero from "./Components/hero";
+import Card from "./Components/card";
 
 function App() {
   return (
     <div>
       <Header />
-      <Hero />
-      
+      {/* <Hero /> */}
+      <Card />
     </div>
   );
 }
