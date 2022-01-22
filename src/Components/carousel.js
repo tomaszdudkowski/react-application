@@ -1,5 +1,5 @@
 import "../SCSS/Components/_carousel.scss";
-
+import carousel from "../JS/carousel";
 import image from "../Image/taylor-vick-M5tzZtFCOfs-unsplash.jpg";
 
 import left__button from "../Image/Icon/iconmonstr-arrow-64-left.svg";
@@ -33,6 +33,8 @@ function Carousel() {
           <button className="carousel__indicator"></button>
           <button className="carousel__indicator"></button>
       </div>
+
+      <script src={carousel}></script>
     </div>
   );
 }
