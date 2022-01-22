@@ -19,14 +19,25 @@
   display: flex;
   align-items: center;
   span {
-      padding-right: 8px;
+    padding-right: 8px;
   }
 }
 
 .gray {
-    color: #cacaca;
+  color: #cacaca;
+}
+
+.red {
+  color: white;
+  background-color: darkgreen;
+  font-weight: 700;
+  width: 100px;
+  text-align: center;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 5px;
 }
 
 .bold {
-    font-weight: 700;
+  font-weight: 700;
 }
