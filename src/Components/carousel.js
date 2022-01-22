@@ -1,11 +1,16 @@
 import "../SCSS/Components/_carousel.scss";
-import carousel from "../JS/carousel";
 import image from "../Image/taylor-vick-M5tzZtFCOfs-unsplash.jpg";
 
 import left__button from "../Image/Icon/iconmonstr-arrow-64-left.svg";
 import right__button from "../Image/Icon/iconmonstr-arrow-25-right.svg";
 
 function Carousel() {
+  window.onload = function () {
+    const wrapper = document.querySelector(".carousel__track");
+    const childArr = Array.from(wrapper.children);
+    console.log(childArr);
+  };
+
   return (
     <div className="carousel">
       <button className="carousel__button carousel__button--left">
@@ -29,12 +34,10 @@ function Carousel() {
       </button>
 
       <div className="carousel__nav">
-          <button className="carousel__indicator current-slide"></button>
-          <button className="carousel__indicator"></button>
-          <button className="carousel__indicator"></button>
+        <button className="carousel__indicator current-slide"></button>
+        <button className="carousel__indicator"></button>
+        <button className="carousel__indicator"></button>
       </div>
-
-      <script src={carousel}></script>
     </div>
   );
 }
