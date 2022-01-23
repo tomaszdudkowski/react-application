@@ -19,12 +19,18 @@
     color.$primary-color 100%
   );
 
+  .brand-dot {
+    color: color.$primary-color;
+    padding-left: 0.2rem;
+    font-size: 2.5rem;
+  }
+
   box-shadow: 2px 1px 10px 2px color.$shadow-color;
 
   p {
     font-size: 1.92rem;
     line-height: 0.09em;
-    padding-left: 1em;
+    padding-left: 2.5em;
     font-weight: 600;
   }
 
