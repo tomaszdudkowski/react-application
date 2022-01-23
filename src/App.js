@@ -5,8 +5,7 @@ import Hero from "./Components/hero";
 function App() {
   return (
     <div>
-      {/* <Header /> */}
-      <Hero />
+      <Header />
       
     </div>
   );
