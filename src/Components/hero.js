@@ -5,7 +5,7 @@ function Hero() {
   return (
     <div>
       <Carousel />
-      <div className="hero">
+      {/* <div className="hero">
         <div className="text-center">
           <p className="text-small">
             CLOUD&CYBERSECURITY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JAN&nbsp;21,&nbsp;2022&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TOMASZ&nbsp;DUDKOWSKI
@@ -22,7 +22,7 @@ function Hero() {
             2022
           </p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
