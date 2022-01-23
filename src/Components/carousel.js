@@ -1,9 +1,10 @@
 import "../SCSS/Components/_carousel.scss";
 import image1 from "../Image/taylor-vick-M5tzZtFCOfs-unsplash.jpg";
 import image2 from "../Image/tianyi-ma-WiONHd_zYI4-unsplash.jpg";
+import image3 from "../Image/donald-giannatti-Wj1D-qiOseE-unsplash.jpg";
 
-import left__button from "../Image/Icon/iconmonstr-arrow-64-left.svg";
-import right__button from "../Image/Icon/iconmonstr-arrow-25-right.svg";
+import left__button from "../Image/Icon/iconmonstr-angel-left-circle-thin.svg";
+import right__button from "../Image/Icon/iconmonstr-angel-right-circle-thin.svg";
 
 function Carousel() {
   window.onload = function () {
@@ -23,26 +24,69 @@ function Carousel() {
     };
     slides.forEach(setSlidePosition);
 
+    // move to target slide
+    const moveToSlide = (track, currentSlide, targetSlide) => {
+      track.style.transform = "translateX(-" + targetSlide.style.left + ")";
+      currentSlide.classList.remove("current-slide");
+      targetSlide.classList.add("current-slide");
+    };
+
+    // update dots
+    const updateDots = (currentDot, targetDot) => {
+      currentDot.classList.remove("current-slide");
+      targetDot.classList.add("current-slide");
+    };
+
     // when click right
     nextButton.addEventListener("click", (e) => {
       const currentSlide = track.querySelector(".current-slide");
       const nextSlide = currentSlide.nextElementSibling;
-      const amountToMove = nextSlide.style.left;
-
-      track.style.transform = "translateX(-" + amountToMove + ")";
-      currentSlide.classList.remove("current-slide");
-      nextSlide.classList.add("current-slide");
+      const firstSlide = slides[0];
+      const firstDot = dots[0];
+      if (nextSlide === null) {
+        moveToSlide(track, currentSlide, firstSlide);
+        const currentDot = dotsNav.querySelector(".current-slide");
+        const nextDot = firstDot;
+        updateDots(currentDot, nextDot);
+      } else {
+        moveToSlide(track, currentSlide, nextSlide);
+        const currentDot = dotsNav.querySelector(".current-slide");
+        const nextDot = currentDot.nextElementSibling;
+        updateDots(currentDot, nextDot);
+      }
     });
 
     // when click left
     prevButton.addEventListener("click", (e) => {
       const currentSlide = track.querySelector(".current-slide");
       const prevSlide = currentSlide.previousElementSibling;
-      const amountToMove = prevSlide.style.left;
+      const lastSlide = slides.at(-1);
+      const lastDot = dots.at(-1);
+      if (prevSlide === null) {
+        moveToSlide(track, currentSlide, lastSlide);
+        const currentDot = dotsNav.querySelector(".current-slide");
+        const prevDot = lastDot;
+        updateDots(currentDot, prevDot);
+      } else {
+        moveToSlide(track, currentSlide, prevSlide);
+        const currentDot = dotsNav.querySelector(".current-slide");
+        const prevDot = currentDot.previousElementSibling;
+        updateDots(currentDot, prevDot);
+      }
+    });
 
-      track.style.transform = "translateX(-" + amountToMove + ")";
-      currentSlide.classList.remove("current-slide");
-      prevSlide.classList.add("current-slide");
+    // when click nav indicators
+    dotsNav.addEventListener("click", (e) => {
+      const targetDot = e.target.closest("button");
+
+      if (!targetDot) return;
+
+      const currentSlide = track.querySelector(".current-slide");
+      const currentDot = dotsNav.querySelector(".current-slide");
+      const targetIndex = dots.findIndex((dot) => dot === targetDot);
+      const targetSlide = slides[targetIndex];
+      moveToSlide(track, currentSlide, targetSlide);
+      updateDots(currentDot, targetDot);
     });
   };
 
@@ -60,7 +104,7 @@ function Carousel() {
             <img className="carousel__image" src={image2} alt=""></img>
           </li>
           <li className="carousel__slide">
-            <img className="carousel__image" src={image1} alt=""></img>
+            <img className="carousel__image" src={image3} alt=""></img>
           </li>
         </ul>
       </div>
