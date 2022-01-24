@@ -1,0 +1,32 @@
+@mixin container_basic($height) {
+    height: $height;
+    margin: 0 auto;
+}
+
+$max-width-980: 980px;
+$width-95: 95%;
+
+.container {
+    max-width: $max-width-980;
+    width: $width-95;
+    margin: 0 auto;
+}
+
+.container_basic {
+    @include container_basic(100vh);
+    max-width: $max-width-980;
+    width: $width-95;
+}
+
+.container_full {
+    @include container_basic(100vh);
+}
+
+.container_infiity {
+    @include container_basic(auto);
+    padding-bottom: 2.5em;
+}
+
+.container_footer {
+    @include container_basic(60vh);
+}

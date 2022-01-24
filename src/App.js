@@ -2,7 +2,7 @@ import "./SCSS/App.scss";
 import Header from "./Components/header";
 import Hero from "./Components/hero";
 import Card from "./Components/card";
-import Welcome from "./Components/welcome";
+import Footer from "./Components/footer";
 
 function App() {
   return (
@@ -11,7 +11,6 @@ function App() {
       <Hero />
 
       <div className="wrapper">
-        <Welcome />
         <Card
           img={require("./Image/Card_Image/card_1.jpg")}
           rate="5.0"
@@ -36,6 +35,7 @@ function App() {
           cost="1000"
         />
       </div>
+      <Footer />
     </div>
   );
 }
