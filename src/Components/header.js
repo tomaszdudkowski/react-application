@@ -1,12 +1,11 @@
 import "../SCSS/Components/_header.scss";
-import facebookicon from "../Image/Icon/iconmonstr-facebook-5.svg";
-import instagramicon from "../Image/Icon/iconmonstr-instagram-15.svg";
-import twittericon from "../Image/Icon/iconmonstr-twitter-5.svg";
+import Logo from "./Elements/_Logo";
+import SocialIcon from "./Elements/_SocialIcon";
 
 function Header() {
   return (
     <header className="header">
-      <p>Technology<span className="brand-dot">.</span></p>
+      <Logo />
       <ul>
         <li>
           <a href="#Categories">CATEGORIES</a>
@@ -20,21 +19,7 @@ function Header() {
         <li>
           <a href="#About">VIDEOS</a>
         </li>
-        <li className="socialicon">
-          <a className="img" href="#facebook">
-            <img src={facebookicon} alt="fb"></img>
-          </a>
-        </li>
-        <li className="socialicon">
-          <a className="img" href="#instagram">
-            <img src={instagramicon} alt="fb"></img>
-          </a>
-        </li>
-        <li className="socialicon">
-          <a className="img" href="#twitter">
-            <img src={twittericon} alt="fb"></img>
-          </a>
-        </li>
+        <SocialIcon />
       </ul>
     </header>
   );

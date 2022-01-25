@@ -1,8 +1,8 @@
 import "./SCSS/App.scss";
-import Header from "./Components/header";
-import Hero from "./Components/hero";
-import Card from "./Components/card";
-import Footer from "./Components/footer";
+import Header from "./Components/Header";
+import Hero from "./Components/Hero";
+import Card from "./Components/Card";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
