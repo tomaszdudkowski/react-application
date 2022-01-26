@@ -10,7 +10,7 @@ function App() {
       <Header />
       <Hero />
 
-      <div className="wrapper">
+      <div className="wrapper flex">
         <Card
           img={require("./Image/Card_Image/card_1.jpg")}
           rate="5.0"

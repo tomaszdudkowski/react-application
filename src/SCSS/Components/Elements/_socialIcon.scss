@@ -1,36 +1,59 @@
 @use "../../Core/colors" as color;
 
-ul {
-    line-height: 2.5em;
+@mixin SocialIcon($position) {
+  .socialIcon {
+    margin: 0;
     display: flex;
     list-style: none;
-
-    li {
+    
+    background-color: rgba($color: color.$shadow-color, $alpha: 0.5);
+    align-items: center;
+    justify-content: space-evenly;
+    .icon {
       text-align: center;
       box-sizing: border-box;
-      width: 6em;
-      
-
-      a:not(a.img) {
+      width: 3.5em;
+  
+      a {
         text-decoration: none;
-        color: color.$text-primary-color;
-        font-weight: 400;
-        font-size: 1rem;
+  
         &:hover,
         &:focus {
-          border-bottom: 2px #d1d1d1 solid;
-          color: color.$text-second-color;
-          font-weight: 500;
+          border-bottom: 0;
         }
       }
-      
-      &.socialicon {
-        width: 3.5em;
-        padding-left: 2em;
-        margin-top: 0.3em;
-        margin-left: 0;
-        margin-right: 0;
-      }
-
     }
   }
+
+  @if ($position == "horizontal") {
+    .socialIcon {
+      height: 7vh;
+      width: 180px;
+      flex-direction: row;
+      padding-right: 3.5em;
+    }
+  } @else if($position == "vertical") {
+    margin-left: 5em;
+    .socialIcon {
+      background-color: transparent;
+      width: 10%;
+      padding: 0;
+      margin: 0;
+      height: 180px;
+      flex-direction: column;
+
+      .icon {
+        width: 3em;
+        padding-top: 1em;
+      }
+    }
+  }
+}
+
+.horizontal {
+  @include SocialIcon("horizontal");
+}
+
+.vertical {
+  @include SocialIcon("vertical");
+}

@@ -1,5 +1,4 @@
-import "../../SCSS/Components/_hero.scss";
-import "../../SCSS/Components/_carousel.scss";
+import "../../SCSS/Components/Elements/_slide.scss";
 
 function Slide(props) {
   const date = new Date();
@@ -26,7 +25,7 @@ function Slide(props) {
 
   return (
     <div>
-      <div className="hero">
+      <div className="slide">
         <div className="text-center">
           <p className="text-small">
             <span>
