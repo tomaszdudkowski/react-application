@@ -1,0 +1,19 @@
+@use "../../Core/colors" as color;
+
+.brand-dot {
+  color: color.$primary-color;
+  padding-left: 0.1rem;
+  font-size: 2rem;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  padding-left: 2.2em;
+  font-weight: 600;
+  color: #d1d1d1;
+  text-shadow: 0px 0px 2px #d1d1d1;
+  margin-top: 0;
+  margin-bottom: 0;
+}

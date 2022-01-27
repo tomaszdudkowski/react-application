@@ -1,23 +1,31 @@
 import "../SCSS/Components/_header.scss";
+import Logo from "./Elements/_Logo";
+import SocialIcon from "./Elements/_SocialIcon";
 
 function Header() {
   return (
-    <header className="header">
-      <p>Technology<span className="brand-dot">.</span></p>
-      <ul>
-        <li>
-          <a href="#Menu">Menu</a>
-        </li>
-        <li>
-          <a href="#Price">Price</a>
-        </li>
-        <li>
-          <a href="#Products">Products</a>
-        </li>
-        <li>
-          <a href="#About">About</a>
-        </li>
-      </ul>
+    <header>
+      <div className="header">
+        <Logo />
+        <div className="flex">
+          <ul>
+            <li>
+              <a href="#Categories">Categories</a>
+            </li>
+            <li>
+              <a href="#Price">Companies</a>
+            </li>
+            <li>
+              <a href="#Products">Technology</a>
+            </li>
+            <li>
+              <a href="#About">Videos</a>
+            </li>
+          </ul>
+        </div>
+        <SocialIcon color="white" position="horizontal" />
+      </div>
+      <div class="line"></div>
     </header>
   );
 }

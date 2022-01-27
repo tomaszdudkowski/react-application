@@ -1,4 +1,4 @@
-import "../SCSS/Components/_hero.scss";
+import "../../SCSS/Components/Elements/_slide.scss";
 
 function Slide(props) {
   const date = new Date();
@@ -20,12 +20,12 @@ function Slide(props) {
   const month = monthNames[date.getMonth()];
 
   const day = date.toLocaleDateString("us-US", {
-    day: "2-digit"
+    day: "2-digit",
   });
 
   return (
     <div>
-      <div className="hero">
+      <div className="slide">
         <div className="text-center">
           <p className="text-small">
             <span>
@@ -42,6 +42,7 @@ function Slide(props) {
           <p>{props.desc}</p>
         </div>
       </div>
+      <img className="carousel__image" src={props.img} alt=""></img>
     </div>
   );
 }

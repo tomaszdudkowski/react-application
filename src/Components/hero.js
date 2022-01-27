@@ -1,5 +1,5 @@
 import "../SCSS/Components/_hero.scss";
-import Carousel from "../Components/carousel";
+import Carousel from "./Carousel";
 
 function Hero() {
   return (

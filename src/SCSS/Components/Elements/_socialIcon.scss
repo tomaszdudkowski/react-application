@@ -1,0 +1,59 @@
+@use "../../Core/colors" as color;
+
+@mixin SocialIcon($position) {
+  .socialIcon {
+    display: flex;
+    margin: 0;
+    display: flex;
+    list-style: none;
+    //background-color: rgba($color: color.$shadow-color, $alpha: 0.5);
+    align-items: center;
+    justify-content: space-evenly;
+    .icon {
+      text-align: center;
+      box-sizing: border-box;
+      width: 3.5em;
+
+      a {
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+
+  @if ($position == "horizontal") {
+    .socialIcon {
+      height: 100%;
+      width: 180px;
+      padding-left: 2em;
+      padding-right: 2em;
+      flex-direction: row;
+      align-items: center;
+    }
+  } @else if($position == "vertical") {
+    .socialIcon {
+      background-color: transparent;
+      width: 10%;
+      margin: 0;
+      height: 180px;
+      flex-direction: column;
+
+      .icon {
+        width: 3em;
+        padding-top: 1em;
+      }
+    }
+  }
+}
+
+.horizontal {
+  @include SocialIcon("horizontal");
+}
+
+.vertical {
+  @include SocialIcon("vertical");
+}
