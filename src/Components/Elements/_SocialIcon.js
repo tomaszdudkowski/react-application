@@ -26,9 +26,9 @@ function SocialIcon(props) {
   }
 
   let position;
-  if(props.position === "vertical") {
+  if (props.position === "vertical") {
     position = "vertical";
-  } else if(props.position === "horizontal") {
+  } else if (props.position === "horizontal") {
     position = "horizontal";
   }
 

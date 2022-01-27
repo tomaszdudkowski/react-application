@@ -4,25 +4,28 @@ import SocialIcon from "./Elements/_SocialIcon";
 
 function Header() {
   return (
-    <header className="header">
-      <Logo />
-      <div className="flex">
-        <ul>
-          <li>
-            <a href="#Categories">CATEGORIES</a>
-          </li>
-          <li>
-            <a href="#Price">COMPANIES</a>
-          </li>
-          <li>
-            <a href="#Products">TECHNOLOGY</a>
-          </li>
-          <li>
-            <a href="#About">VIDEOS</a>
-          </li>
-        </ul>
+    <header>
+      <div className="header">
+        <Logo />
+        <div className="flex">
+          <ul>
+            <li>
+              <a href="#Categories">Categories</a>
+            </li>
+            <li>
+              <a href="#Price">Companies</a>
+            </li>
+            <li>
+              <a href="#Products">Technology</a>
+            </li>
+            <li>
+              <a href="#About">Videos</a>
+            </li>
+          </ul>
+        </div>
         <SocialIcon color="white" position="horizontal" />
       </div>
+      <div class="line"></div>
     </header>
   );
 }
