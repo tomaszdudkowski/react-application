@@ -8,7 +8,7 @@ let data = [
     readTime: 5,
     description:
       "Freddie Eastham explains why software, not hardware, will be the biggest enabler for progression in the e-mobility sector",
-    coverImage: "../",
+    img: require("./Image/Card_Image/card_1.jpg"),
     stats: {
       rating: 5.0,
       reviewCount: 30,
@@ -23,10 +23,10 @@ let data = [
     readTime: 5,
     description:
       "Wisk, developer of the first all-electric, self-flying air taxi in the US, has secured $450 million in funding from The Boeing Company",
-    coverImage: "../",
+    img: require("./Image/Card_Image/card_1.jpg"),
     stats: {
-      rating: 5.0,
-      reviewCount: 30,
+      rating: 3.8,
+      reviewCount: 14,
     },
   },
   {
@@ -38,10 +38,10 @@ let data = [
     readTime: 4,
     description:
       "Revolutionary drone-based Intelligence-as-a-Service firm set for global expansion with 20 million euro cash boost from Ventura Capital",
-    coverImage: "../",
+    img: require("./Image/Card_Image/card_1.jpg"),
     stats: {
       rating: 5.0,
-      reviewCount: 30,
+      reviewCount: 47,
     },
   },
   {
@@ -53,10 +53,10 @@ let data = [
     readTime: 2,
     description:
       "Wisk, developer of the first all-electric, self-flying air taxi in the US, has secured $450 million in funding from The Boeing Company",
-    coverImage: "../",
+    img: require("./Image/Card_Image/card_1.jpg"),
     stats: {
-      rating: 5.0,
-      reviewCount: 30,
+      rating: 5.2,
+      reviewCount: 68,
     },
   },
   {
@@ -68,10 +68,10 @@ let data = [
     readTime: 3,
     description:
       "Revolutionary drone-based Intelligence-as-a-Service firm set for global expansion with 20 million euro cash boost from Ventura Capital",
-    coverImage: "../",
+    img: require("./Image/Card_Image/card_1.jpg"),
     stats: {
-      rating: 5.0,
-      reviewCount: 30,
+      rating: 4.2,
+      reviewCount: 33,
     },
   },
   {
@@ -83,10 +83,10 @@ let data = [
     readTime: 4,
     description:
       "Revolutionary drone-based Intelligence-as-a-Service firm set for global expansion with 20 million euro cash boost from Ventura Capital",
-    coverImage: "../",
+    img: require("./Image/Card_Image/card_1.jpg"),
     stats: {
-      rating: 5.0,
-      reviewCount: 30,
+      rating: 4.9,
+      reviewCount: 28,
     },
   },
 ];

@@ -1,7 +1,7 @@
 .card {
-  margin-top: 150px;
-  margin-left: 150px;
-  width: 175px;
+  margin-top: 50px;
+  width: 200px;
+  margin-right: 50px;
   font-size: 12px;
 }
 
@@ -27,17 +27,18 @@
   color: #cacaca;
 }
 
-.red {
-  color: white;
-  background-color: darkgreen;
-  font-weight: 700;
-  width: 100px;
-  text-align: center;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  border-radius: 5px;
-}
-
 .bold {
   font-weight: 700;
+}
+
+.vote {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  &:hover,
+  &:focus {
+    font-weight: 900;
+    text-decoration: underline;
+    cursor: pointer;
+  }
 }
