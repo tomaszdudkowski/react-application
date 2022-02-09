@@ -1,40 +1,27 @@
 import React from "react";
 import "../SCSS/Components/_card.scss";
-import star from "../Image/Card_Image/star-icon-48.png";
+import arrow from "../Image/Icon/right-arrow-svgrepo-com.svg";
 
 function Card(props) {
-
-  const date = props.date.toDateString();
-
-  const [vote, setVote] = React.useState(0);
-
-  function add() {
-    setVote(prevVote => prevVote + 1)
-  }
-
-  function substract() {
-    setVote(prevVote => prevVote - 1)
-  }
+  const date = props.date.toLocaleDateString();
 
   return (
     <div className="card">
-      <img src={props.img} alt="img_" className="card--image" />
-      <div className="card--stats">
-        <img className="card--star" src={star} alt="star" />
-        <span className="bold">{props.stats.rating}</span>
-        <span className="gray">({props.stats.reviewCount})</span>
-        <span >{date}</span>
+      <div className="card--header">
+        <img src={props.img} alt="img_" className="card--image" />
       </div>
-      <div>
-        <span className="bold vote" onClick={add}>up vote</span>
-        <span className="bold gray">{vote}</span>
-        <span className="bold vote" onClick={substract}>down vote</span>
+      <div className="card--body">
+        <div className="card--stats">
+          <span>POSTED {date}</span>
+          <span>#DESIGN</span>
+        </div>
+        <p className="card--title">{props.title}</p>
+        <p className="card--text">{props.description}</p>
       </div>
-      <p>{props.title}</p>
-      <p className="bold">
-        {props.description}
-      </p>
-
+      <a className="read" href="https://google.com">
+        <p>READ ARTICLE</p>
+        <img src={arrow} alt="arrow" className="arrow" />
+      </a>
     </div>
   );
 }

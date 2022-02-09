@@ -7,7 +7,7 @@ let data = [
     date: new Date(2022, 1, 23),
     readTime: 5,
     description:
-      "Freddie Eastham explains why software, not hardware, will be the biggest enabler for progression in the e-mobility sector",
+      "Freddie Eastham explains why software, not hardware, will be the biggest.",
     img: require("./Image/Card_Image/card_1.jpg"),
     stats: {
       rating: 5.0,
@@ -22,7 +22,7 @@ let data = [
     date: new Date(2022, 1, 27),
     readTime: 5,
     description:
-      "Wisk, developer of the first all-electric, self-flying air taxi in the US, has secured $450 million in funding from The Boeing Company",
+      "Wisk, developer of the first all-electric, self-flying air taxi in the US.",
     img: require("./Image/Card_Image/card_1.jpg"),
     stats: {
       rating: 3.8,
@@ -37,7 +37,7 @@ let data = [
     date: new Date(2022, 1, 26),
     readTime: 4,
     description:
-      "Revolutionary drone-based Intelligence-as-a-Service firm set for global expansion with 20 million euro cash boost from Ventura Capital",
+      "Revolutionary drone-based Intelligence-as-a-Service firm set for global expansion.",
     img: require("./Image/Card_Image/card_1.jpg"),
     stats: {
       rating: 5.0,
@@ -52,7 +52,7 @@ let data = [
     date: new Date(2022, 1, 27),
     readTime: 2,
     description:
-      "Wisk, developer of the first all-electric, self-flying air taxi in the US, has secured $450 million in funding from The Boeing Company",
+      "Wisk, developer of the first all-electric, self-flying air taxi in the US.",
     img: require("./Image/Card_Image/card_1.jpg"),
     stats: {
       rating: 5.2,
@@ -67,7 +67,7 @@ let data = [
     date: new Date(2022, 1, 20),
     readTime: 3,
     description:
-      "Revolutionary drone-based Intelligence-as-a-Service firm set for global expansion with 20 million euro cash boost from Ventura Capital",
+      "Revolutionary drone-based Intelligence-as-a-Service firm set for global expansion.",
     img: require("./Image/Card_Image/card_1.jpg"),
     stats: {
       rating: 4.2,
@@ -82,7 +82,7 @@ let data = [
     date: new Date(2022, 1, 23),
     readTime: 4,
     description:
-      "Revolutionary drone-based Intelligence-as-a-Service firm set for global expansion with 20 million euro cash boost from Ventura Capital",
+      "Revolutionary drone-based Intelligence-as-a-Service firm set for global expansion.",
     img: require("./Image/Card_Image/card_1.jpg"),
     stats: {
       rating: 4.9,
