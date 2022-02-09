@@ -25,7 +25,7 @@ function Header() {
         </div>
         <SocialIcon color="white" position="horizontal" />
       </div>
-      <div class="line"></div>
+      <div className="line"></div>
     </header>
   );
 }
