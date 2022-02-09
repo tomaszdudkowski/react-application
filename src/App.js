@@ -22,7 +22,7 @@ function App() {
 
       <Hero />
 
-      <div className="container flex wrap">{Articles}</div>
+      <div className="container flex">{Articles}</div>
 
       <Footer />
     </div>
