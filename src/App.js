@@ -7,7 +7,17 @@ import Footer from "./Components/footer";
 import ArticleData from "./data";
 
 function App() {
-  const Articles = ArticleData.map((article) => {
+
+  const items = [
+    "Audi",
+    "VW",
+    "BMW",
+    "Renault",
+    "Mazda",
+    "Toyota"
+  ]
+
+  const Articles = ArticleData.map(article => {
     return (
       <Card
         key={article.id}
@@ -23,6 +33,12 @@ function App() {
       <Hero />
 
       <div className="container flex">{Articles}</div>
+
+      <ul>
+        {items.map((item, i) => (
+          <li key={i}>{item}</li>
+        ))}
+      </ul>
 
       <Footer />
     </div>
