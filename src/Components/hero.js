@@ -3,7 +3,7 @@ import Carousel from "./carousel";
 
 function Hero() {
   return (
-    <div>
+    <>
       <Carousel />
       {/* <div className="hero">
         <div className="text-center">
@@ -23,7 +23,7 @@ function Hero() {
           </p>
         </div>
       </div> */}
-    </div>
+    </>
   );
 }
 

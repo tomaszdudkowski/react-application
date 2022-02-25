@@ -27,7 +27,7 @@ function App() {
   });
 
   return (
-    <div>
+    <>
       <Header />
 
       <Hero />
@@ -41,7 +41,7 @@ function App() {
       </ul>
 
       <Footer />
-    </div>
+    </>
   );
 }
 

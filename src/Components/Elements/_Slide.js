@@ -24,7 +24,7 @@ function Slide(props) {
   });
 
   return (
-    <div>
+    <>
       <div className="slide">
         <div className="text-center">
           <p className="text-small">
@@ -43,7 +43,7 @@ function Slide(props) {
         </div>
       </div>
       <img className="carousel__image" src={props.img} alt=""></img>
-    </div>
+    </>
   );
 }
 
