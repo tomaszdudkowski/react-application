@@ -1,0 +1,49 @@
+@use "../Core/colors" as color;
+@use "../Layout/column" as column;
+
+.popular {
+    display: flex;
+    flex-direction: column;
+    background-color: color.$text-primary-color;
+    padding: 1em;
+    margin: 1em;
+    width: column.$col-35;
+    .accent {
+        color: color.$header-second;
+    }
+    .header {
+        font-size: 18px;
+        padding-bottom: 1em;
+    }
+
+    .title {
+        font-size: 16px;
+        font-weight: 900;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .line {
+        height: 1px;
+        background-color: color.$accent-color;
+        margin-bottom: 1em;
+        margin-top: 0;
+    }
+    .desc {
+        display: flex;
+        justify-content: flex-start;
+        color: color.$accent-light-color;
+        font-weight: 700;
+        font-size: 14px;
+
+        .id {
+            margin-right: 1.5em;
+            padding: 0 .3em;
+            border: 1px color.$accent-color solid;
+        }
+
+        .categories {
+            padding: 0 .7em;
+            border: 1px color.$accent-color solid;
+        }
+    }
+}

@@ -1,29 +1,17 @@
 import "./SCSS/App.scss";
-import Header from "./Components/header";
-import Hero from "./Components/hero";
-import Card from "./Components/card";
-import Footer from "./Components/footer";
+import Header from "./Components/Header";
+import Hero from "./Components/Hero";
+import Card from "./Components/Card";
+import MostPopular from "./Components/MostPopular";
+import Footer from "./Components/Footer";
 
-import ArticleData from "./data";
+import articles from "./articles.json";
+import popular from "./mostpopular.json";
 
 function App() {
-
-  const items = [
-    "Audi",
-    "VW",
-    "BMW",
-    "Renault",
-    "Mazda",
-    "Toyota"
-  ]
-
-  const Articles = ArticleData.map(article => {
-    return (
-      <Card
-        key={article.id}
-        {...article}
-      />
-    );
+  
+  const Articles = articles.map((article) => {
+    return <Card key={article.id} {...article} />;
   });
 
   return (
@@ -32,7 +20,10 @@ function App() {
 
       <Hero />
 
-      <div className="container flex">{Articles}</div>
+      <div className="container flex">
+      {Articles}
+      <MostPopular articles={popular}/>
+      </div>
 
       <ul>
         {items.map((item, i) => (
