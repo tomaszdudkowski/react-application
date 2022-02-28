@@ -6,7 +6,6 @@ export default function MostPopular({articles}) {
 
     const Articles = articles.map(article => {
         if(article.id < 4) return <PopularArticle key={article.id} {...article} />;
-             
     });
 
     return(
