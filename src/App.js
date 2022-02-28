@@ -4,10 +4,10 @@ import Hero from "./Components/hero";
 import Card from "./Components/card";
 import Footer from "./Components/footer";
 
-import ArticleData from "./data";
+import data from "./data.json";
 
 function App() {
-  const Articles = ArticleData.map((article) => {
+  const Articles = data.map((article) => {
     return (
       <Card
         key={article.id}

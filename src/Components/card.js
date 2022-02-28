@@ -3,16 +3,16 @@ import "../SCSS/Components/_card.scss";
 import arrow from "../Image/Icon/right-arrow-svgrepo-com.svg";
 
 function Card(props) {
-  const date = props.date.toLocaleDateString();
+  //const date = props.date.toLocaleDateString();
 
   return (
     <div className="card">
       <div className="card--header">
-        <img src={props.img} alt="img_" className="card--image" />
+        <img src={require(`./../Image/Card_Image/${props.img}`)} alt="img_" className="card--image" />
       </div>
       <div className="card--body">
         <div className="card--stats">
-          <span>POSTED {date}</span>
+          {/* <span>POSTED {date}</span> */}
           <span>#DESIGN</span>
         </div>
         <p className="card--title">{props.title}</p>
