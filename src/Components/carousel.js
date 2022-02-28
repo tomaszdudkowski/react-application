@@ -1,4 +1,5 @@
 import "../SCSS/Components/_carousel.scss";
+import "../../node_modules/animate.css/animate.css";
 import Slide from "./Elements/_Slide";
 import image1 from "../Image/taylor-vick-M5tzZtFCOfs-unsplash.jpg";
 import image2 from "../Image/tianyi-ma-WiONHd_zYI4-unsplash.jpg";
@@ -8,7 +9,7 @@ import left__button from "../Image/Icon/iconmonstr-angel-left-circle-thin.svg";
 import right__button from "../Image/Icon/iconmonstr-angel-right-circle-thin.svg";
 
 function Carousel() {
-  window.onload = function () {
+  window.onload = () => {
     const track = document.querySelector(".carousel__track");
     const slides = Array.from(track.children);
     // buttons
@@ -89,6 +90,29 @@ function Carousel() {
       moveToSlide(track, currentSlide, targetSlide);
       updateDots(currentDot, targetDot);
     });
+
+    const automaticSlider = () => {
+      const currentSlide = track.querySelector(".current-slide");
+      const nextSlide = currentSlide.nextElementSibling;
+      const firstSlide = slides[0];
+      const firstDot = dots[0];
+      if (nextSlide === null) {
+        moveToSlide(track, currentSlide, firstSlide);
+        const currentDot = dotsNav.querySelector(".current-slide");
+        const nextDot = firstDot;
+        updateDots(currentDot, nextDot);
+      } else {
+        moveToSlide(track, currentSlide, nextSlide);
+        const currentDot = dotsNav.querySelector(".current-slide");
+        const nextDot = currentDot.nextElementSibling;
+        updateDots(currentDot, nextDot);
+      }
+    };
+
+    //automatic next slide
+    setInterval(() => {
+      automaticSlider();
+    }, 10000);
   };
 
   return (

@@ -9,12 +9,13 @@ import articles from "./articles.json";
 import popular from "./mostpopular.json";
 
 function App() {
+  
   const Articles = articles.map((article) => {
     return <Card key={article.id} {...article} />;
   });
 
   return (
-    <div>
+    <>
       <Header />
 
       <Hero />
@@ -24,8 +25,14 @@ function App() {
       <MostPopular articles={popular}/>
       </div>
 
+      <ul>
+        {items.map((item, i) => (
+          <li key={i}>{item}</li>
+        ))}
+      </ul>
+
       <Footer />
-    </div>
+    </>
   );
 }
 
