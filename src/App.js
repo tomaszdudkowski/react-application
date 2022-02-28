@@ -25,12 +25,6 @@ function App() {
       <MostPopular articles={popular}/>
       </div>
 
-      <ul>
-        {items.map((item, i) => (
-          <li key={i}>{item}</li>
-        ))}
-      </ul>
-
       <Footer />
     </>
   );

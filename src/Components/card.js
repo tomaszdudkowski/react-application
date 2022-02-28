@@ -16,8 +16,8 @@ function Card(props) {
           {/* <span>POSTED {date}</span> */}
           <span>#DESIGN</span>
         </div>
-        <p className="card--title">{title}</p>
-        <p className="card--text">{description}</p>
+        <p className="card--title">{props.title}</p>
+        <p className="card--text">{props.description}</p>
       </div>
       <a className="read" href="https://google.com">
         <p>READ ARTICLE</p>
