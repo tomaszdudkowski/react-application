@@ -1,17 +1,22 @@
-import React from "react";
-
+import React, { useContext } from "react";
 import Message from "./Elements/_Message";
+import { MessageContext } from "../App";
 
-export default function MessageLogger({ messages }) {
-    
-    const Info = messages.map(message => {
-        return <Message {...message} />
-    })
+export default function MessageLogger({
+  messagesA = [],
+  onRemoveMessage = (f) => f
+}) {
+  const { messages } = useContext(MessageContext);
+  //if (!messages.length) return <div>Brak wiadomości.</div>;
 
-    return (
+  const MessageItem = messages.map((message) => {
+    return <Message {...message} onRemove={onRemoveMessage} />;
+  });
+
+  return (
     <div className="messages-wrapper">
       <h1>Messages</h1>
-      {Info}
+      {MessageItem}
     </div>
   );
 }
