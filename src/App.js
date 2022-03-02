@@ -1,4 +1,4 @@
-import React, {createContext} from "react";
+import React, { createContext } from "react";
 
 import "./SCSS/App.scss";
 import Header from "./Components/Header";
@@ -33,16 +33,15 @@ function App() {
         <MostPopular articles={popular} />
       </div>
       <div className="container flex">
-        
-        <MessageContext.Provider value={{ messagesData }}>
-        <MessageLogger
-          onRemoveMessage={(id) => {
-            const newMessages = messages.filter(
-              (messages) => messages.id !== id
-            );
-            setMessages(newMessages);
-          }}
-        />
+        <MessageContext.Provider value={{ messages }}>
+          <MessageLogger
+            onRemoveMessage={(id) => {
+              const newMessages = messages.filter(
+                (messages) => messages.id !== id
+              );
+              setMessages(newMessages);
+            }}
+          />
         </MessageContext.Provider>
       </div>
 
