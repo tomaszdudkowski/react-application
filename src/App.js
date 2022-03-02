@@ -11,7 +11,7 @@ import Footer from "./Components/Footer";
 import articles from "./Data/articles.json";
 import popular from "./Data/mostpopular.json";
 
-import { MessageProvider } from "./ContextProviders/MessageHooks";
+import { MessageProvider } from "./Hooks/MessageHooks";
 
 function App() {
   const Articles = articles.map((article) => {

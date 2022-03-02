@@ -1,7 +1,7 @@
 [
-    {"id":1, "title":"test", "message":"fake test"},
-    {"id":2, "title":"test", "message":"fake test"},
-    {"id":3, "title":"test", "message":"fake test"},
-    {"id":4, "title":"test", "message":"fake test"},
-    {"id":5, "title":"test", "message":"fake test"}
+    {"id":1, "title":"New JS Library!", "message":"Facebook create new React technology library."},
+    {"id":2, "title":"React 2022", "message":"React is the best in 2022!"},
+    {"id":3, "title":"Microsoft technolgy in 2022", "message":".NET 6 in comming"},
+    {"id":4, "title":"Test Message", "message":"This is first test message..."},
+    {"id":5, "title":"Enterprise technolgy in your brand", "message":"How can you use enterprise technology in 2022 ?"}
 ]

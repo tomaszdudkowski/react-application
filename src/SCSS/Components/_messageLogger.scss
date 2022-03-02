@@ -1,0 +1,41 @@
+.message-logger {
+  flex-direction: column;
+  width: 100%;
+
+  .title {
+    margin: 0;
+  }
+
+  .messages-wrapper {
+    padding-bottom: 1em;
+
+    .message {
+      background-color: lightgrey;
+      padding-left: 1em;
+      padding-right: 1em;
+      padding-bottom: 1em;
+      margin-right: 1em;
+      margin-bottom: 1em;
+      width: 25%;
+      border-radius: 10px;
+      
+      .message-title {
+        text-align: center;
+      }
+
+      .message-text {
+      }
+
+      .message-remove {
+        margin-top: 1em;
+        color: darkmagenta;
+        display: inline;
+
+        &:hover {
+          cursor: pointer;
+          color: #c54ac5;
+        }
+      }
+    }
+  }
+}
