@@ -12,6 +12,7 @@ import articles from "./Data/articles.json";
 import popular from "./Data/mostpopular.json";
 
 import { MessageProvider } from "./Hooks/MessageHooks";
+import SearchForm from "./Components/SearchForm";
 
 function App() {
   const Articles = articles.map((article) => {
@@ -30,6 +31,7 @@ function App() {
       </div>
       <div className="container flex">
         <MessageProvider>
+          <SearchForm />
           <MessageLogger />
         </MessageProvider>
       </div>
