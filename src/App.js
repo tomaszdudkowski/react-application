@@ -1,4 +1,4 @@
-import React, { createContext } from "react";
+import React from "react";
 
 import "./SCSS/App.scss";
 import Header from "./Components/Header";
@@ -8,16 +8,12 @@ import MostPopular from "./Components/MostPopular";
 import MessageLogger from "./Components/MessageLogger";
 import Footer from "./Components/Footer";
 
-import articles from "./articles.json";
-import popular from "./mostpopular.json";
-import messagesData from "./messages.json";
-import { useState } from "react";
+import articles from "./Data/articles.json";
+import popular from "./Data/mostpopular.json";
 
-export const MessageContext = createContext();
+import { MessageProvider } from "./ContextProviders/MessageHooks";
 
 function App() {
-  const [messages, setMessages] = useState(messagesData);
-
   const Articles = articles.map((article) => {
     return <Card key={article.id} {...article} />;
   });
@@ -33,16 +29,9 @@ function App() {
         <MostPopular articles={popular} />
       </div>
       <div className="container flex">
-        <MessageContext.Provider value={{ messages }}>
-          <MessageLogger
-            onRemoveMessage={(id) => {
-              const newMessages = messages.filter(
-                (messages) => messages.id !== id
-              );
-              setMessages(newMessages);
-            }}
-          />
-        </MessageContext.Provider>
+        <MessageProvider>
+          <MessageLogger />
+        </MessageProvider>
       </div>
 
       <Footer />
