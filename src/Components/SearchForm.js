@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useMessages } from "../Hooks/MessageHooks";
+import { FaRegTimesCircle } from "react-icons/fa";
 
 export default function SearchForm() {
   const [phrase, setPhrase] = useState("");
@@ -13,12 +14,18 @@ export default function SearchForm() {
           value={phrase}
           onChange={(event) => {
             setPhrase(event.target.value);
-            searchMessage(phrase);
+            searchMessage(event.target.value);
           }}
           type="text"
           placeholder="Search phrase"
           required
         />
+        <div onClick={() => {
+          setPhrase("");
+          searchMessage("")
+        }}>
+          <FaRegTimesCircle />
+        </div>
       </form>
     </>
   );
