@@ -19,7 +19,7 @@ export default function MessageLogger() {
   let MessageItem;
   if (found === "") {
     MessageItem = messages.map((message) => {
-      return <Message {...message} />;
+      return <Message key={message.id} {...message} />;
     });
 
     return (
@@ -30,7 +30,7 @@ export default function MessageLogger() {
     );
   } else {
     MessageItem = found.map((message) => {
-      return <Message {...message} />;
+      return <Message key={message.id} {...message} />;
     });
 
     return (

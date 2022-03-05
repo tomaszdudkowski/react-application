@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 import messagesData from "../Data/messages.json";
 
 const MessageContext = createContext();
@@ -6,7 +6,16 @@ export const useMessages = () => useContext(MessageContext);
 
 export function MessageProvider({ children }) {
   const [messages, setMessages] = useState(messagesData);
-  const [found, setFound] = useState("");
+  const [found, setFound] = useState(messages);
+
+  useEffect(() => {
+    console.log("Render")
+  
+    return () => {
+      console.log("Unmounted!")
+    }
+  })
+  
 
   const searchMessages = (text) => {
     if (text !== "") {
@@ -16,7 +25,7 @@ export function MessageProvider({ children }) {
         )
       );
     } else {
-      setFound("");
+      setFound(messages);
     }
   };
 
