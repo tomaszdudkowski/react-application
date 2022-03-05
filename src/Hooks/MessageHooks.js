@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useState, useEffect, useLayoutEffect } from "react";
 import messagesData from "../Data/messages.json";
 
 const MessageContext = createContext();
@@ -8,7 +8,7 @@ export function MessageProvider({ children }) {
   const [messages, setMessages] = useState(messagesData);
   const [found, setFound] = useState(messages);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     console.log("Render")
   
     return () => {
