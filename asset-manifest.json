@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/react-application/static/css/main.7002355e.css",
+    "main.js": "/react-application/static/js/main.618e7046.js",
+    "static/media/taylor-vick-M5tzZtFCOfs-unsplash.jpg": "/react-application/static/media/taylor-vick-M5tzZtFCOfs-unsplash.be6841786c02c2831824.jpg",
+    "static/media/donald-giannatti-Wj1D-qiOseE-unsplash.jpg": "/react-application/static/media/donald-giannatti-Wj1D-qiOseE-unsplash.9744284a67b1dac65ebf.jpg",
+    "static/media/tianyi-ma-WiONHd_zYI4-unsplash.jpg": "/react-application/static/media/tianyi-ma-WiONHd_zYI4-unsplash.6e4c603a60b7ff676345.jpg",
+    "static/media/card_1.jpg": "/react-application/static/media/card_1.3b64f859f4af85113590.jpg",
+    "static/media/card_2.jpg": "/react-application/static/media/card_2.bd08bc28b291c662899d.jpg",
+    "static/media/julian-o-hayon-oW4tZeidfkA-unsplash.jpg": "/react-application/static/media/julian-o-hayon-oW4tZeidfkA-unsplash.754a59eb0ad6e6fbe82b.jpg",
+    "static/media/Technology-Texture-Polo-2000.png": "/react-application/static/media/Technology-Texture-Polo-2000.a64d0e9145ebddf28ff9.png",
+    "static/media/iconmonstr-instagram-black.svg": "/react-application/static/media/iconmonstr-instagram-black.6f2685c34ae7bd4af84be3389805a996.svg",
+    "static/media/iconmonstr-instagram-white.svg": "/react-application/static/media/iconmonstr-instagram-white.d81b5861284a1d5088451d85b7764df0.svg",
+    "static/media/right-arrow-svgrepo-com.svg": "/react-application/static/media/right-arrow-svgrepo-com.6da965d22b0399b31409e66dc27411fd.svg",
+    "static/media/iconmonstr-twitter-black.svg": "/react-application/static/media/iconmonstr-twitter-black.00a403c9345b37005846f312b5dd185d.svg",
+    "static/media/iconmonstr-twitter-white.svg": "/react-application/static/media/iconmonstr-twitter-white.912270b39c2a08808b2b6ac4b2acc594.svg",
+    "index.html": "/react-application/index.html",
+    "static/media/iconmonstr-facebook-black.svg": "/react-application/static/media/iconmonstr-facebook-black.6a60b9be3a436af496cfcce037394739.svg",
+    "static/media/iconmonstr-facebook-white.svg": "/react-application/static/media/iconmonstr-facebook-white.389b86cd034062d1f811f2df2915f0ab.svg",
+    "static/media/iconmonstr-angel-left-circle-thin.svg": "/react-application/static/media/iconmonstr-angel-left-circle-thin.b467ec3a1f71b95d536b1093d0260a67.svg",
+    "static/media/iconmonstr-angel-right-circle-thin.svg": "/react-application/static/media/iconmonstr-angel-right-circle-thin.34cc0c0f2ebfda3cb8f2581b2fdb9963.svg",
+    "main.7002355e.css.map": "/react-application/static/css/main.7002355e.css.map",
+    "main.618e7046.js.map": "/react-application/static/js/main.618e7046.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7002355e.css",
+    "static/js/main.618e7046.js"
+  ]
+}
