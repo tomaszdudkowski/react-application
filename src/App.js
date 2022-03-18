@@ -7,6 +7,7 @@ import Card from "./Components/Card";
 import MostPopular from "./Components/MostPopular";
 import MessageLogger from "./Components/MessageLogger";
 import Footer from "./Components/Footer";
+import GitHubUser from "./Components/GitHubUser";
 
 import articles from "./Data/articles.json";
 import popular from "./Data/mostpopular.json";
@@ -35,7 +36,7 @@ function App() {
           <MessageLogger />
         </MessageProvider>
       </div>
-
+      <GitHubUser login={"tomaszdudkowski"}/>
       <Footer />
     </>
   );
