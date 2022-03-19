@@ -7,13 +7,15 @@ import Card from "./Components/Card";
 import MostPopular from "./Components/MostPopular";
 import MessageLogger from "./Components/MessageLogger";
 import Footer from "./Components/Footer";
-import GitHubUser from "./Components/GitHubUser";
 
 import articles from "./Data/articles.json";
 import popular from "./Data/mostpopular.json";
 
 import { MessageProvider } from "./Hooks/MessageHooks";
 import SearchForm from "./Components/SearchForm";
+import { GitProvider } from "./Hooks/GitHubDataHooks";
+import GitProfile from "./Components/Elements/_GitProfile";
+import SearchProfile from "./Components/SearchProfile";
 
 function App() {
   const Articles = articles.map((article) => {
@@ -36,7 +38,14 @@ function App() {
           <MessageLogger />
         </MessageProvider>
       </div>
-      <GitHubUser login={"tomaszdudkowski"}/>
+      <div className="container flex">
+        {/* <GitHubUser login={"tomaszdudkowski"}/> */}
+        <GitProvider>
+          <SearchProfile />
+          <GitProfile />
+        </GitProvider>
+      </div>
+      
       <Footer />
     </>
   );

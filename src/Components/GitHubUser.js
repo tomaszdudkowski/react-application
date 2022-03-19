@@ -26,7 +26,7 @@ export default function GitHubUser({ login }) {
         <img
           alt={data.login}
           src={data.avatar_url}
-          width="13%"
+          width="50%"
         />
         <h1>Login: {data.login}</h1>
         <p>{data.location}</p>

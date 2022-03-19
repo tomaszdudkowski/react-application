@@ -15,7 +15,6 @@ export function MessageProvider({ children }) {
       console.log("Unmounted!")
     }
   })
-  
 
   const searchMessages = (text) => {
     if (text !== "") {
