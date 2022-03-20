@@ -1,17 +1,13 @@
-import GitRepo from "./_GitRepo";
-import { useGit } from "../../Hooks/GitHubDataHooks";
-
-export default function GitProfile() {
-    const { ...profile } = useGit();
+export default function GitProfile({name, avatar_url, login, location, html_url, bio}) {
     
     return (
         <>
-            <img alt={profile.name} src={profile.avatar_url} />
-            <h2>{profile.name}</h2>
-            <h4>{profile.login}</h4>
-            <p>{profile.location}</p>
-            <a href={profile.html_url}>{profile.login} Profile on GitHub</a>
-            <p>{profile.bio}</p>
+            <img alt={name} src={avatar_url} />
+            <h2>{name}</h2>
+            <h4>{login}</h4>
+            <p>{location}</p>
+            <a href={html_url}>{login} Profile on GitHub</a>
+            <p>{bio}</p>
 
             {/* <GitRepo /> */}
         </>

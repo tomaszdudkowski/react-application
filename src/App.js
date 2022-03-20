@@ -13,9 +13,8 @@ import popular from "./Data/mostpopular.json";
 
 import { MessageProvider } from "./Hooks/MessageHooks";
 import SearchForm from "./Components/SearchForm";
-import { GitProvider } from "./Hooks/GitHubDataHooks";
-import GitProfile from "./Components/Elements/_GitProfile";
-import SearchProfile from "./Components/SearchProfile";
+import GitUser from "./Components/GitUser";
+import { GitProvider } from "./Hooks/GitHooks";
 
 function App() {
   const Articles = articles.map((article) => {
@@ -39,13 +38,11 @@ function App() {
         </MessageProvider>
       </div>
       <div className="container flex">
-        {/* <GitHubUser login={"tomaszdudkowski"}/> */}
         <GitProvider>
-          <SearchProfile />
-          <GitProfile />
+          <GitUser />
         </GitProvider>
       </div>
-      
+
       <Footer />
     </>
   );
