@@ -38,10 +38,10 @@ function App() {
           <MessageLogger />
         </MessageProvider>
       </div>
-      <div className="container flex">
-        <GitProvider>
+      <div className="container">
+        <GitProvider className="flex">
           <SearchProfile />
-          <GitUser />
+          {/* <GitUser /> */}
         </GitProvider>
       </div>
 

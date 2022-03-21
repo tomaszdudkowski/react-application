@@ -11,5 +11,9 @@ export function GitProvider({ children }) {
     fetchData(`https://api.github.com/users/${user}`)
   }
 
-  return <GitContext.Provider value={{ data, loading, error, fetchUser }}>{children}</GitContext.Provider>;
+  const fetchRepos = (user) => {
+    fetchData(`https://api.github.com/users/${user}/repos`)
+  }
+
+  return <GitContext.Provider value={{ data, loading, error, fetchUser, fetchRepos }}>{children}</GitContext.Provider>;
 }
