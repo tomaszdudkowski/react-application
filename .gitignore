@@ -24,3 +24,5 @@ yarn-error.log*
 workspace.code-workspace
 .vscode/settings.json
 react-application.code-workspace
+package-lock.json
+package-lock.json
