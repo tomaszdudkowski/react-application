@@ -7,12 +7,12 @@ export const useMessages = () => useContext(MessageContext);
 export function MessageProvider({ children }) {
   const [messages, setMessages] = useState(messagesData);
   const [found, setFound] = useState(messages);
-
+  
   useLayoutEffect(() => {
-    console.log("Render")
+    console.log("Render Messages Grid")
   
     return () => {
-      console.log("Unmounted!")
+      console.log("Unmounted Messages Grid!")
     }
   })
 
