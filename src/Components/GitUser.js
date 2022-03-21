@@ -1,13 +1,10 @@
-import GitProfile from "../Components/Elements/_GitProfile"
 import { useGit } from "../Hooks/GitHooks"
 
 export default function GitUser() {
-    const { data } = useGit();
-    console.log(data)
+    const { data, loading } = useGit();
     return (
         <>
-            {!data ? <p>{data}</p> : <p>Błąd</p>}
-             {/* {!loading ? <p>{data.login}</p> : <p>Loading...</p>} */}
+            <img src={data.avatar_url} alt={data.login} />
         </>
     )
 }

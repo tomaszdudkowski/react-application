@@ -14,6 +14,7 @@ import popular from "./Data/mostpopular.json";
 import { MessageProvider } from "./Hooks/MessageHooks";
 import SearchForm from "./Components/SearchForm";
 import GitUser from "./Components/GitUser";
+import SearchProfile from "./Components/SearchProfile";
 import { GitProvider } from "./Hooks/GitHooks";
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
       </div>
       <div className="container flex">
         <GitProvider>
+          <SearchProfile />
           <GitUser />
         </GitProvider>
       </div>

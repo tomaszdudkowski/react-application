@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { FaRegTimesCircle } from "react-icons/fa";
-import { useGit } from "../Hooks/GitHubDataHooks";
+import { useGit } from "../Hooks/GitHooks";
 
 export default function SearchProfile() {
   const [phrase, setPhrase] = useState("");
 
-  const { searchProfile } = useGit();
+  const { fetchUser } = useGit();
 
   return (
     <>
@@ -17,7 +17,7 @@ export default function SearchProfile() {
           }}
           onKeyDown={(event) => {
             if(event.key === 'Enter') {
-              searchProfile(phrase)
+              fetchUser(phrase)
               console.log(phrase)
               event.preventDefault()
             }
@@ -29,7 +29,6 @@ export default function SearchProfile() {
         <div
           onClick={() => {
             setPhrase("");
-            searchProfile("");
           }}
         >
           <FaRegTimesCircle />
