@@ -5,7 +5,7 @@ const GitContext = createContext();
 export const useGit = () => useContext(GitContext);
 
 export function GitProvider({ children }) {
-  const [{data, error, loading}, fetchData] = useFetch("https://api.github.com/users/tomaszdudkowski")
+  const [{data, error, loading}, fetchData] = useFetch("")
 
   const fetchUser = (user) => {
     fetchData(`https://api.github.com/users/${user}`)
