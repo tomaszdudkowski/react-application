@@ -2,11 +2,11 @@ import { useGit } from "../Hooks/GitHooks"
 import GitProfile from "./Elements/_GitProfile";
 
 export default function GitUser() {
-    const { data, loading, fetchRepos } = useGit();
+    const { userData, userLoading, fetchRepos } = useGit();
     return (
         <>
-            {data && !loading ? <GitProfile {...data} /> : <p>Brak danych</p>}
-            {/* <button onClick={fetchRepos}>Repozytoria</button> */}
+            {userData && !userLoading ? <GitProfile {...userData} /> : <p>Brak danych</p>}
+            {userData && !userLoading ? <button onClick={() => fetchRepos(userData.login)}>Repozytoria</button> : <></> }
         </>
     )
 }

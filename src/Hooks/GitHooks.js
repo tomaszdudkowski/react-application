@@ -5,15 +5,16 @@ const GitContext = createContext();
 export const useGit = () => useContext(GitContext);
 
 export function GitProvider({ children }) {
-  const [{data, error, loading}, fetchData] = useFetch("")
+  const {data : userData, error : userError, loading : userLoading, fetchData : userFetch} = useFetch("")
+  const {data: repoData, error : repoError, loading : repoLoading, fetchData : repoFetch} = useFetch("")
 
   const fetchUser = (user) => {
-    fetchData(`https://api.github.com/users/${user}`)
+    userFetch(`https://api.github.com/users/${user}`)
   }
 
-  const fetchRepos = (user) => {
-    fetchData(`https://api.github.com/users/${user}/repos`)
+  const fetchRepos = (login) => {
+    repoFetch(`https://api.github.com/users/${login}/repos`)
   }
 
-  return <GitContext.Provider value={{ data, loading, error, fetchUser, fetchRepos }}>{children}</GitContext.Provider>;
+  return <GitContext.Provider value={{ userData, userError, userLoading, repoData, repoError, repoLoading, fetchUser, fetchRepos }}>{children}</GitContext.Provider>;
 }

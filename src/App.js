@@ -16,6 +16,7 @@ import SearchForm from "./Components/SearchForm";
 import GitUser from "./Components/GitUser";
 import SearchProfile from "./Components/SearchProfile";
 import { GitProvider } from "./Hooks/GitHooks";
+import GitRepos from "./Components/Elements/_GitRepos";
 
 function App() {
   const Articles = articles.map((article) => {
@@ -41,7 +42,8 @@ function App() {
       <div className="container">
         <GitProvider className="flex">
           <SearchProfile />
-          {/* <GitUser /> */}
+          <GitUser />
+          <GitRepos />
         </GitProvider>
       </div>
 

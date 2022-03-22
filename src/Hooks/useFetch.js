@@ -34,5 +34,5 @@ export default function useFetch(apiUrl) {
     fetchData(apiUrl);
   }, [apiUrl]);
 
-  return [{ data, loading, error }, fetchData];
+  return { data, loading, error, fetchData};
 }
