@@ -17,6 +17,8 @@ import GitUser from "./Components/GitUser";
 import SearchProfile from "./Components/SearchProfile";
 import { GitProvider } from "./Hooks/GitHooks";
 import GitRepos from "./Components/Elements/_GitRepos";
+import Loader from "./Components/Elements/_Loader";
+import SearchRepo from "./Components/SearchRepo";
 
 function App() {
   const Articles = articles.map((article) => {
@@ -43,6 +45,7 @@ function App() {
         <GitProvider className="flex">
           <SearchProfile />
           <GitUser />
+          <SearchRepo />
           <GitRepos />
         </GitProvider>
       </div>

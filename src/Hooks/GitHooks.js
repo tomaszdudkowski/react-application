@@ -1,4 +1,4 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState } from "react";
 import useFetch from "./useFetch";
 
 const GitContext = createContext();
@@ -18,12 +18,25 @@ export function GitProvider({ children }) {
     fetchData: repoFetch,
   } = useFetch();
 
-  const fetchUser = (user = "tomaszdudkowski") => {
+  const [r, setR] = useState(null);
+  const [found, setFound] = useState();
+
+  const fetchUser = (user) => {
     userFetch(`https://api.github.com/users/${user}`);
   };
 
-  const fetchRepos = (login = "tomaszdudkowski") => {
-    repoFetch(`https://api.github.com/users/${login}/repos`);
+  const fetchRepos = (login) => {
+    repoFetch(`https://api.github.com/users/${login}/repos`)
+    setR(repoData)
+  };
+  const findRepos = (text) => {
+    if (text !== "") {
+      setFound(
+        r.filter((item) => item.name.toLowerCase().includes(text.toLowerCase()))
+      );
+    } else {
+      setFound(r);
+    }
   };
 
   return (
@@ -33,10 +46,13 @@ export function GitProvider({ children }) {
         userError,
         userLoading,
         repoData,
+        r,
+        found,
         repoError,
         repoLoading,
         fetchUser,
-        fetchRepos
+        fetchRepos,
+        findRepos,
       }}
     >
       {children}
