@@ -33,6 +33,8 @@ export function GitProvider({ children }) {
       setFound(
         r.filter((item) => item.name.toLowerCase().includes(text.toLowerCase()))
       );
+    } else {
+      setFound(r)
     }
   };
 

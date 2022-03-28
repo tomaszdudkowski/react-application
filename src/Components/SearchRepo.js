@@ -21,7 +21,7 @@ export default function SearchRepo() {
           required
         />
         <div onClick={() => {
-          setPhrase("");
+          setPhrase("")
           findRepos("")
         }}>
           <FaRegTimesCircle />
