@@ -24,7 +24,7 @@ header {
 
       li {
         text-align: center;
-        padding-left: 1.5em;
+        padding-left: 4em;
         a {
           text-decoration: none;
           color: color.$text-primary-color;
@@ -34,6 +34,10 @@ header {
           &:focus {
             transition: 100ms ease-in;
             color: #ad5389;
+          }
+          [aria-hidden="true"] {
+            font-weight: 900;
+            margin-inline-end: .2em;
           }
         }
       }

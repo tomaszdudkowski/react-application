@@ -31,7 +31,7 @@ function App() {
 
       <Hero />
 
-      <div className="container flex">
+      <div className="container flex wrap">
         {Articles}
         <MostPopular articles={popular} />
       </div>
@@ -50,7 +50,7 @@ function App() {
         </GitProvider>
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

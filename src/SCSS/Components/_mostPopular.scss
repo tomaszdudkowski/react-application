@@ -8,6 +8,11 @@
     padding: 1em;
     margin: 1em;
     width: column.$col-35;
+
+    @media (max-width: 600px) {
+        width: column.$col-100;
+    }
+
     .accent {
         color: color.$header-second;
     }
