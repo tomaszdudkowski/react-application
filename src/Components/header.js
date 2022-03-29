@@ -7,8 +7,8 @@ import SocialIcon from "./Elements/_SocialIcon";
 function Header() {
 
   return (
-    <header>
-      <div className="navbar">
+    <header className="navbar">
+      <div className="nav">
         <Logo />
         <button
           className="mobile-nav-toggle"
@@ -17,7 +17,7 @@ function Header() {
         >
           <ImMenu />
         </button>
-        <nav id="primary-navigation" data-visible="false">
+        <nav id="primary-navigation" className="nav-menu" data-visible="false">
           <ul>
             <li className="active">
               <a href="#Categories">
@@ -40,10 +40,11 @@ function Header() {
               </a>
             </li>
           </ul>
+          <SocialIcon color="white" position="horizontal" />
         </nav>
-        <SocialIcon color="white" position="horizontal" />
+        
       </div>
-      {/* <div className="line"></div> */}
+      <div className="line"></div>
     </header>
   );
 }

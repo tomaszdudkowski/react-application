@@ -23,6 +23,14 @@
         }
       }
     }
+
+    @media (max-width: 1010px) {
+      display: none;
+    }
+
+    @media (max-width: 995px) {
+      display: block;
+    }
   }
 
   @if ($position == "horizontal") {
@@ -33,6 +41,10 @@
       padding-right: 5em;
       flex-direction: row;
       align-items: center;
+
+      @media (max-width: 995px) {
+        padding-top: 20px;
+      }
     }
   } @else if($position == "vertical") {
     .socialIcon {

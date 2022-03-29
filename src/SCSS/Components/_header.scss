@@ -1,27 +1,32 @@
 @use "../Core/colors" as color;
 
-header {
-  .navbar {
-    display: flex;
-    position: fixed;
-    width: 100%;
-    height: 7vh;
-    z-index: 999;
-    top: 0;
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  top: 0;
+  color: #d1d1d1;
+  background-color: color.$header-primary;
+  box-shadow: 2px 1px 10px 2px color.$shadow-color;
+
+  .nav {
     justify-content: space-between;
-    color: #d1d1d1;
-    background-color: color.$header-primary;
-    box-shadow: 2px 1px 10px 2px color.$shadow-color;
+    display: flex;
   }
 
   .mobile-nav-toggle {
     display: none;
   }
 
+  .nav-menu {
+    display: flex;
+  }
+
   @media (max-width: 995px) {
-    .navbar {
-      background-color: transparent;
+    .nav {
+      height: 6vh;
     }
+
     .mobile-nav-toggle {
       display: block;
       position: absolute;
@@ -29,22 +34,24 @@ header {
       background-color: transparent;
       border: 0;
       z-index: 999;
-      width: 6rem;
+      width: 3rem;
       aspect-ratio: 1;
-      top: 2rem;
+      top: 0.002rem;
       right: 2rem;
     }
     #primary-navigation {
       position: fixed;
-      inset: 0 0 0 30%;
+      z-index: -1;
+      // inset: 0 0 0 60%;
+      width: 30%;
       background-color: hsl(0 0% 0% / 0.7);
       backdrop-filter: blur(1rem);
       padding: min(30vh, 10rem) 2em;
-      transform: translateX(100%);
+      transform: translateX(0%);
     }
 
     #primary-navigation[data-visible="true"] {
-      transform: translateX(0%);
+      transform: translateX(300%);
     }
 
     li {
@@ -60,6 +67,8 @@ header {
 
     @media (max-width: 995px) {
       flex-direction: column;
+      align-items: flex-start;
+      padding: 0;
     }
 
     li {
@@ -87,7 +96,7 @@ header {
   }
 
   .line {
-    height: 70px;
+    height: 5px;
     width: 100%;
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5); // #23d5ab
     //background: linear-gradient(-45deg, color.$primary-color, color.$second-color); // #23d5ab
