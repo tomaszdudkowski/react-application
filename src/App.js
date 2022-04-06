@@ -32,10 +32,10 @@ function App() {
       <Hero />
 
       <div className="container flex wrap">
-        {Articles}
-        <MostPopular articles={popular} />
+        {/* {Articles}
+        <MostPopular articles={popular} /> */}
       </div>
-      <div className="container flex">
+      {/* <div className="container flex">
         <MessageProvider>
           <SearchForm />
           <MessageLogger />
@@ -48,6 +48,10 @@ function App() {
           <SearchRepo />
           <GitRepos />
         </GitProvider>
+      </div> */}
+      
+      <div className="container">
+        <h1>test</h1>
       </div>
 
       {/* <Footer /> */}
