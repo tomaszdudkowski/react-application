@@ -4,7 +4,6 @@ import SocialIcon from "./Elements/_SocialIcon";
 // import menu from "../JS/Menu"
 
 function Header() {
-
   return (
     <header className="navbar">
       <div className="nav">
@@ -13,8 +12,7 @@ function Header() {
           className="mobile-nav-toggle"
           aria-controls="primary-navigation"
           aria-expanded="false"
-        >
-        </button>
+        ></button>
         <nav id="primary-navigation" className="nav-menu" data-visible="false">
           <ul>
             <li className="active">
@@ -38,9 +36,8 @@ function Header() {
               </a>
             </li>
           </ul>
-          <SocialIcon color="white" position="horizontal" />
         </nav>
-        
+        <SocialIcon color="white" position="horizontal" />
       </div>
       <div className="line"></div>
     </header>

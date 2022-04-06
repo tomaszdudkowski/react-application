@@ -8,6 +8,8 @@
   color: #d1d1d1;
   background-color: color.$header-primary;
   box-shadow: 2px 1px 10px 2px color.$shadow-color;
+  display: flex;
+  flex-direction: column;
 
   .nav {
     justify-content: space-between;
