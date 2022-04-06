@@ -1,4 +1,3 @@
-import { ImMenu } from "react-icons/im";
 import "../SCSS/Components/_header.scss";
 import Logo from "./Elements/_Logo";
 import SocialIcon from "./Elements/_SocialIcon";
@@ -15,7 +14,6 @@ function Header() {
           aria-controls="primary-navigation"
           aria-expanded="false"
         >
-          <ImMenu />
         </button>
         <nav id="primary-navigation" className="nav-menu" data-visible="false">
           <ul>

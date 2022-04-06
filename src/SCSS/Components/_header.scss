@@ -22,7 +22,7 @@
     display: flex;
   }
 
-  @media (max-width: 995px) {
+  @media (max-width: 775px) {
     .nav {
       height: 6vh;
     }
@@ -30,28 +30,35 @@
     .mobile-nav-toggle {
       display: block;
       position: absolute;
-      color: #fff;
       background-color: transparent;
+      background-image: url("../../Image/Icon/bars-solid.svg");
+      background-repeat: no-repeat;
       border: 0;
       z-index: 999;
-      width: 3rem;
       aspect-ratio: 1;
-      top: 0.002rem;
+      margin-top: 0.8em;
+      width: 2em;
       right: 2rem;
     }
+
+    .mobile-nav-toggle[aria-expanded="true"] {
+      background-image: url("../../Image/Icon/xmark-solid.svg");
+    }
+
     #primary-navigation {
       position: fixed;
       z-index: -1;
-      // inset: 0 0 0 60%;
-      width: 30%;
+      inset: 0 0 60% 0%;
       background-color: hsl(0 0% 0% / 0.7);
       backdrop-filter: blur(1rem);
       padding: min(30vh, 10rem) 2em;
-      transform: translateX(0%);
+      transform: translateY(-100%);
+      transition: transform 350ms ease-out;
     }
 
     #primary-navigation[data-visible="true"] {
-      transform: translateX(300%);
+      transform: translateY(0%);
+      transition: transform 350ms ease-in;
     }
 
     li {
@@ -65,10 +72,11 @@
     list-style: none;
     padding-right: 2em;
 
-    @media (max-width: 995px) {
+    @media (max-width: 775px) {
       flex-direction: column;
+      margin: 0 auto;
+      margin-top: -3em;
       align-items: flex-start;
-      padding: 0;
     }
 
     li {
@@ -83,13 +91,17 @@
         &:hover,
         &:focus {
           transition: 100ms ease-in;
-          color: #ad5389;
+          color: #e00f8d;
         }
         [aria-hidden="true"] {
           font-weight: 900;
         }
         span {
           padding-right: 0.3em;
+        }
+
+        @media (max-width: 775px) {
+          font-size: 1.5em;
         }
       }
     }
